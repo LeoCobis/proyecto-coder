@@ -1,0 +1,426 @@
+/* Reset básico */
+/* Estilos generales para pantallas grandes (desktops) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+   
+}
+
+/* -------- Dispositivos móviles (max-width: 767px) -------- */
+@media (max-width: 767px) {
+    .services-content {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        padding: 10px; /* Ajuste de padding para móviles */
+    }
+    .service img {
+        width: 50px; /* Reducción de tamaño de imagen para móviles */
+    }
+    .service p {
+        font-size: 14px; /* Ajuste de fuente en móviles */
+    }
+}
+
+/* -------- Tablets (min-width: 768px) y (max-width: 1023px) -------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .services-content {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+        padding: 20px;
+    }
+    .service img {
+        width: 70px; /* Tamaño medio de imagen para tablets */
+    }
+    .service p {
+        font-size: 16px; /* Fuente un poco más grande en tablets */
+    }
+}
+
+/* -------- Desktops (min-width: 1024px) -------- */
+@media (min-width: 1024px) {
+    .services-content {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en desktops */
+        padding: 30px;
+    }
+    .service img {
+        width: 80px; /* Tamaño de imagen normal para desktops */
+    }
+    .service p {
+        font-size: 18px; /* Fuente normal en desktops */
+    }
+}
+
+
+
+.logo {
+    height: 50px;
+}
+
+.navbar-custom {
+    background-color: #343a40;
+    /* Color del fondo (bg-dark) */
+}
+
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.55);
+    /* Color del texto inactivo */
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: rgba(255, 255, 255, 0.9);
+    /* Color del texto activo o hover */
+}
+
+/* Estilos del main */
+.home-main {
+    display: flex;
+    height: 100vh;
+    /* Altura completa de la pantalla */
+}
+
+/* Sección de la imagen que ocupa el 50% del ancho */
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra toda la sección */
+}
+
+/* Sección del título */
+.title-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* Alinea el contenido a la derecha */
+    align-items: flex-end;
+    /* Alinea el contenido a la parte inferior */
+    padding: 20px;
+    background-color: #f0f0f0;
+    /* Color de fondo para contraste */
+}
+
+.title-section h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+/* About Me */
+/* Estilos del main */
+.about-me-main {
+    display: flex;
+    height: 100vh;
+    /* Altura completa de la pantalla */
+}
+
+/* Sección del texto que ocupa el 50% del ancho */
+.text-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    /* Color de fondo claro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Sección de la imagen que ocupa el 50% del ancho */
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra toda la sección */
+}
+
+/*skills*/
+
+/* Centrado del título de página */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Descripción centrada y más espaciada */
+.skills-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Contenedor general de las skills */
+.skills-content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Estilos generales de las barras de progreso */
+.progress-bar-container {
+    background-color: rgb(229, 233, 236);
+    width: 100%;
+    height: 25px;
+    border-radius: 12px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo y animación de las barras de progreso */
+.progress-bar {
+    background-color: rgb(0, 100, 247);
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    /* Para iniciar la animación desde cero */
+    animation: fill-bar 2s forwards;
+}
+
+/* Animación para llenar las barras */
+@keyframes fill-bar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: inherit;
+    }
+}
+
+/* Especificación de tamaños de las barras */
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 85%;
+}
+
+.javascript {
+    width: 70%;
+}
+
+.reactjs {
+    width: 65%;
+}
+
+.officepackage {
+    width: 70%;
+}
+
+.ingles {
+    width: 95%;
+}
+
+/* Estilo de los títulos de cada skill */
+.skills-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+    /* Centramos los títulos */
+}
+
+/* Services */
+/* Centrado del título de página */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos del contenedor de servicios */
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Ajuste responsivo */
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilos de cada tarjeta de servicio */
+.service {
+    background-color: #f9f9f9;
+    /* Fondo claro para contraste */
+    border: 1px solid #ddd;
+    /* Borde sutil */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Efecto hover para las tarjetas */
+.service:hover {
+    transform: translateY(-5px);
+    /* Levanta ligeramente la tarjeta */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    /* Aumenta la sombra */
+}
+
+/* Estilos de las imágenes dentro de las tarjetas */
+.service img {
+    max-width: 80px;
+    /* Ajuste del tamaño de los logos */
+    margin-bottom: 20px;
+}
+
+/* Estilos del texto */
+.service p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Contact */
+/* Centrado del título de página */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos del contenedor de contacto */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilos del formulario de contacto */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del contenedor de detalles de contacto */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.map {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+}
+
+.address {
+    text-align: center;
+}
+
+/* Estilos de los íconos de contacto */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    transform: scale(1.1);
+}
+
+.icons {
+    width: 96px;
+}
+
+/* Ajustes responsivos */
+@media screen and (min-width: 768px) {
+    .contact-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .map {
+        width: 50%;
+    }
+
+    .address {
+        width: 40%;
+        text-align: left;
+    }
+
+    .contact-form {
+        max-width: 50%;
+    }
+}
